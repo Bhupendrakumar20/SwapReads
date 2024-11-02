@@ -3767,26 +3767,9 @@ color: #ac2127;
         <nav class="navbar nav_activated" data-navbar>
           <ul style="max-width: 1300px; display: flex; justify-content: space-between; align-items: center; gap: 5px;" class="navbar-list nav">
             <li class="navbar-item logo-item" style="display:flex;">
-<a href="index.html" onclick="lenis.scrollTo('index.html');" class="logo">
-    <img src="./assets/images/final.png" class="logopic" style="width: 15rem;">
-</a>
-</li>
-<li class="navbar-item" style="left: -30px;">
-    <a href="#home" onclick="lenis.scrollTo('#home')" style="left: -30px;" class="navbar-link" data-nav-link>
-        <i class="ri-home-fill"></i> Home
-    </a>
-</li>
-<li class="navbar-item">
-    <a href="./assets/html/about.html" class="navbar-link" style="left: -30px;" data-nav-link>
-        <i class="ri-home-fill"></i>About<br> Us
-    </a>
-</li>
-<li class="navbar-item">
-    <a href="./assets/html/author.html" class="navbar-link" style="left: -30px;" data-nav-link>
-        <i class="ri-home-fill"></i>Authors
-    </a>
-</li>
-
+                <a href="index.html" onclick="lenis.scrollTo('index.html');" class="logo">
+                    <img src="./assets/images/final.png" class="logopic" style="width: 15rem;">
+                </a>
             </li>
             <li class="navbar-item">
                 <a href="#home" onclick="lenis.scrollTo('#home')" class="navbar-link" data-nav-link=""><i class="ri-home-fill"></i> Home</a>
@@ -3801,36 +3784,27 @@ color: #ac2127;
                 <a href="#faq" onclick="lenis.scrollTo('#faq')" class="navbar-link" data-nav-link=""><i class="ri-questionnaire-fill"></i> FAQ</a>
             </li>
             <li class="navbar-item">
-<li class="navbar-item" id="login-signup-link">
-    <a href="#rate-us" onclick="openRateUsModal(); return false;" class="navbar-link" style="left: -30px;">Rate<br>Us</a>
-</li>
-<li class="navbar-item" id="login-signup-link">
-    <a href="./assets/html/event.html" class="navbar-link" style="left: -30px;">Events</a>
-</li>
-<li class="navbar-item" id="login-signup-link">
-    <a href="./assets/html/map.html" class="navbar-link" style="left: -30px;">Map</a>
-</li>
-
+                <a href="./assets/html/event.html" class="navbar-link" data-nav-link="">Events</a>
             </li>
-            
-
             <li class="navbar-item" id="login-signup-link">
                 <a href="./assets/html/login.html" class="navbar-link">Login</a>
             </li>
-<li class="navbar-item dropdown">
-    <a href="#" class="navbar-link" onclick="toggleMoreMenu(event)">More <i class="ri-arrow-down-s-fill"></i></a>
-    <ul class="dropdown-menu">
-        <li><a href="./assets/html/author.html" class="navbar-link">Authors</a></li>
-        <li><a href="./assets/html/tips.html" class="navbar-link">Tips</a></li>
-        <li><a href="#benefits" onclick="lenis.scrollTo('#benefits')" class="navbar-link">Benefits</a></li>
-        <li><a href="#genre" onclick="lenis.scrollTo('#genre')" class="navbar-link">Genre</a></li>
-        <li><a href="#rate-us" onclick="openRateUsModal(); return false;" class="navbar-link">Rate Us</a></li>
-        <li><a href="./assets/html/map.html" class="navbar-link">Map</a></li>
-        <li><a href="comsp.html" class="navbar-link">Community Spotlight</a></li>
-        <li><a href="audiobook.html" onclick="lenis.scrollTo('audiobooks')" class="navbar-link">Audio Books</a></li>
-    </ul>
-</li>
-
+            <li class="navbar-item dropdown">
+                <a href="#" class="navbar-link" onclick="toggleMoreMenu(event)">More 
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="1.3em" height="1.3em" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="m12 13.171l4.95-4.95l1.414 1.415L12 16L5.636 9.636L7.05 8.222z"></path>
+                    </svg>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="./assets/html/author.html" class="navbar-link">Authors</a></li>
+                    <li><a href="./assets/html/tips.html" class="navbar-link">Tips</a></li>
+                    <li><a href="#benefits" onclick="lenis.scrollTo('#benefits')" class="navbar-link">Benefits</a></li>
+                    <li><a href="#genre" onclick="lenis.scrollTo('#genre')" class="navbar-link">Genre</a></li>
+                    <li><a href="#rate-us" onclick="openRateUsModal(); return false;" class="navbar-link">Rate Us</a></li>
+                    <li><a href="./assets/html/map.html" class="navbar-link">Map</a></li>
+                    <li><a href="comsp.html" class="navbar-link">Community Spotlight</a></li>
+                    <li><a href="audiobook.html" onclick="lenis.scrollTo('audiobooks')" class="navbar-link">Audio Books</a></li>
+                </ul>
             </li>
             <li>
                 <div class="action" style="right: 30px; padding-bottom: 20px;">
@@ -3840,6 +3814,52 @@ color: #ac2127;
                 </div>
             </li>
         </ul>
+        
+        <style>
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                background-color: white;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                z-index: 1000;
+            }
+        
+            .navbar-item.dropdown:hover .dropdown-menu,
+            .dropdown-menu.active {
+                display: block;
+            }
+        
+            .dropdown-menu li {
+                padding: 10px;
+                text-align: left;
+            }
+        
+            .dropdown-menu li a {
+                display: block;
+                color: black;
+                text-decoration: none;
+            }
+        
+            .dropdown-menu li a:hover {
+                background-color: #f0f0f0;
+            }
+        
+            .dropdown-arrow {
+                margin-left: 5px;
+                vertical-align: middle;
+            }
+        </style>
+        
+        <script>
+            function toggleMoreMenu(event) {
+                const menu = event.currentTarget.nextElementSibling;
+                menu.classList.toggle('active');
+            }
+        </script>
+        
         
         <style>
             .dropdown-menu {
